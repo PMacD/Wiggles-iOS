@@ -25,7 +25,21 @@
 		73CECA3025EE3A76008362CE /* DogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CECA2F25EE3A76008362CE /* DogData.swift */; };
 		73CECA3525EE416C008362CE /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CECA3425EE416C008362CE /* DetailsView.swift */; };
 		73E4B4D925EE75B10020C282 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E4B4D825EE75B10020C282 /* DetailsViewModel.swift */; };
+		986690472B18E900009EE0DA /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986690462B18E900009EE0DA /* BaseTest.swift */; };
+		986690492B18E9C8009EE0DA /* ProductListPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986690482B18E9C8009EE0DA /* ProductListPageTests.swift */; };
+		9866904C2B18EB9E009EE0DA /* ProductListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866904B2B18EB9E009EE0DA /* ProductListPage.swift */; };
+		9866904E2B18EBD2009EE0DA /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9866904D2B18EBD2009EE0DA /* BaseScreen.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		986690412B18E576009EE0DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73CEC9D825EE0A8F008362CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73CEC9DF25EE0A8F008362CE;
+			remoteInfo = "Wiggles-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		73CEC9E025EE0A8F008362CE /* Wiggles-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wiggles-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,10 +62,22 @@
 		73CECA2F25EE3A76008362CE /* DogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogData.swift; sourceTree = "<group>"; };
 		73CECA3425EE416C008362CE /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		73E4B4D825EE75B10020C282 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		9866903B2B18E576009EE0DA /* Wiggles-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wiggles-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		986690462B18E900009EE0DA /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		986690482B18E9C8009EE0DA /* ProductListPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPageTests.swift; sourceTree = "<group>"; };
+		9866904B2B18EB9E009EE0DA /* ProductListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPage.swift; sourceTree = "<group>"; };
+		9866904D2B18EBD2009EE0DA /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		73CEC9DD25EE0A8F008362CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986690382B18E576009EE0DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				73CEC9E225EE0A8F008362CE /* Wiggles-iOS */,
+				9866903C2B18E576009EE0DA /* Wiggles-iOSUITests */,
 				73CEC9E125EE0A8F008362CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				73CEC9E025EE0A8F008362CE /* Wiggles-iOS.app */,
+				9866903B2B18E576009EE0DA /* Wiggles-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +187,33 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		983884C92B18F972009AE676 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				986690462B18E900009EE0DA /* BaseTest.swift */,
+				986690482B18E9C8009EE0DA /* ProductListPageTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9866903C2B18E576009EE0DA /* Wiggles-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				983884C92B18F972009AE676 /* Tests */,
+				9866904A2B18EB62009EE0DA /* Pages */,
+			);
+			path = "Wiggles-iOSUITests";
+			sourceTree = "<group>";
+		};
+		9866904A2B18EB62009EE0DA /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				9866904B2B18EB9E009EE0DA /* ProductListPage.swift */,
+				9866904D2B18EBD2009EE0DA /* BaseScreen.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,17 +234,39 @@
 			productReference = 73CEC9E025EE0A8F008362CE /* Wiggles-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9866903A2B18E576009EE0DA /* Wiggles-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 986690452B18E576009EE0DA /* Build configuration list for PBXNativeTarget "Wiggles-iOSUITests" */;
+			buildPhases = (
+				986690372B18E576009EE0DA /* Sources */,
+				986690382B18E576009EE0DA /* Frameworks */,
+				986690392B18E576009EE0DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				986690422B18E576009EE0DA /* PBXTargetDependency */,
+			);
+			name = "Wiggles-iOSUITests";
+			productName = "Wiggles-iOSUITests";
+			productReference = 9866903B2B18E576009EE0DA /* Wiggles-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		73CEC9D825EE0A8F008362CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					73CEC9DF25EE0A8F008362CE = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					9866903A2B18E576009EE0DA = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 73CEC9DF25EE0A8F008362CE;
 					};
 				};
 			};
@@ -207,6 +284,7 @@
 			projectRoot = "";
 			targets = (
 				73CEC9DF25EE0A8F008362CE /* Wiggles-iOS */,
+				9866903A2B18E576009EE0DA /* Wiggles-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +299,13 @@
 				73CEC9EB25EE0A92008362CE /* Preview Assets.xcassets in Resources */,
 				73CECA1825EE1F30008362CE /* Sailec.ttf in Resources */,
 				73CEC9E825EE0A92008362CE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986690392B18E576009EE0DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +332,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		986690372B18E576009EE0DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986690472B18E900009EE0DA /* BaseTest.swift in Sources */,
+				9866904E2B18EBD2009EE0DA /* BaseScreen.swift in Sources */,
+				986690492B18E9C8009EE0DA /* ProductListPageTests.swift in Sources */,
+				9866904C2B18EB9E009EE0DA /* ProductListPage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		986690422B18E576009EE0DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73CEC9DF25EE0A8F008362CE /* Wiggles-iOS */;
+			targetProxy = 986690412B18E576009EE0DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		73CEC9ED25EE0A92008362CE /* Debug */ = {
@@ -410,6 +514,51 @@
 			};
 			name = Release;
 		};
+		986690432B18E576009EE0DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "PaulMacD.Wiggles-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wiggles-iOS";
+			};
+			name = Debug;
+		};
+		986690442B18E576009EE0DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "PaulMacD.Wiggles-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wiggles-iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +576,15 @@
 			buildConfigurations = (
 				73CEC9F025EE0A92008362CE /* Debug */,
 				73CEC9F125EE0A92008362CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		986690452B18E576009EE0DA /* Build configuration list for PBXNativeTarget "Wiggles-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986690432B18E576009EE0DA /* Debug */,
+				986690442B18E576009EE0DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
