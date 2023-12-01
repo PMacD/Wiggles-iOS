@@ -20,15 +20,15 @@ struct HomeView: View {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Hey Sameer,").modifier(SailecFont(.bold, size: 24))
-                                    .foregroundColor(Color.text_primary_color).padding(.top, 16)
+                                    .foregroundColor(Color.text_primary_color).padding(.top, 16).accessibilityIdentifier("plpHeading")
                                 Text("Adopt a new friend near you!").modifier(SailecFont(.regular, size: 18))
-                                    .foregroundColor(Color.text_primary_color).padding(.top, 4)
+                                    .foregroundColor(Color.text_primary_color).padding(.top, 4).accessibilityIdentifier("plpSubHeading")
                             }
                             Spacer()
                         }
                         Text("Nearby results").modifier(SailecFont(.bold, size: 14))
                             .foregroundColor(Color.text_primary_color)
-                            .padding(.top, 24).padding(.bottom, 8)
+                            .padding(.top, 24).padding(.bottom, 8).accessibilityIdentifier("plpListHeader")
                         ForEach(viewModel.dogsList) { model in
                             NavigationLink(destination: DetailsView(model: model), label: {
                                 HomeListModelView(image: model.image, name: model.name, age: model.age,
@@ -55,14 +55,14 @@ struct HomeListModelView: View {
         HStack(spacing: 12) {
             Image(image)
                 .resizable().scaledToFill()
-                .frame(width: 100, height: 100).cornerRadius(16)
+                .frame(width: 100, height: 100).cornerRadius(16).accessibilityIdentifier("plpDogImage")
             VStack(alignment: .leading, spacing: 12) {
-                Text(name).lineLimit(1).modifier(SailecFont(.medium, size: 20)).foregroundColor(Color.text_primary_color)
-                Text("\(age) yrs | \(about)").lineLimit(1).modifier(SailecFont(.regular, size: 14)).foregroundColor(Color.text_primary_color)
+                Text(name).lineLimit(1).modifier(SailecFont(.medium, size: 20)).foregroundColor(Color.text_primary_color).accessibilityIdentifier("plpDogName")
+                Text("\(age) yrs | \(about)").lineLimit(1).modifier(SailecFont(.regular, size: 14)).foregroundColor(Color.text_primary_color).accessibilityIdentifier("plpDogAgeTemperament")
                 HStack(alignment: .center, spacing: 2) {
                     Image(IMAGE_LOC_ICON).resizable().frame(width: 20, height: 20)
                     Text("\(location) away").modifier(SailecFont(.regular, size: 14))
-                        .foregroundColor(Color.text_primary_color).padding(.top, 2)
+                        .foregroundColor(Color.text_primary_color).padding(.top, 2).accessibilityIdentifier("plpDogLocation")
                 }
             }
             Spacer()
@@ -70,7 +70,7 @@ struct HomeListModelView: View {
                 GenderView(isMale: gender == "male")
                 Spacer()
                 Text("12 min ago").modifier(SailecFont(.regular, size: 12))
-                    .foregroundColor(Color.text_primary_color)
+                    .foregroundColor(Color.text_primary_color).accessibilityIdentifier("plpAdPosted")
             }.padding(.vertical, 4)
         }
         .padding(16)
@@ -86,7 +86,7 @@ struct GenderView: View {
             .foregroundColor(isMale ? Color.blue_color : Color.red_color)
             .padding(.horizontal, 18).padding(.vertical, 8)
             .background(isMale ? Color.blue_color_trans : Color.red_color_trans)
-            .cornerRadius(12)
+            .cornerRadius(12).accessibilityIdentifier("plpDogGender")
     }
 }
 

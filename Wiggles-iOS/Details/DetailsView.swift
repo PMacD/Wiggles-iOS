@@ -25,37 +25,37 @@ struct DetailsView: View {
                     VStack {
                         ZStack(alignment: .top) {
                             Image(viewModel.model.image).resizable()
-                                .frame(height: 400).frame(maxWidth: .infinity)
+                                .frame(height: 400).frame(maxWidth: .infinity).accessibilityIdentifier("dogImage")
                             HStack {
                                 Button(action: { self.presentationMode.wrappedValue.dismiss() },
-                                       label: { Image(IMAGE_BACK_ICON).resizable().frame(width: 34, height: 34) })
+                                       label: { Image(IMAGE_BACK_ICON).resizable().frame(width: 34, height: 34) }).accessibilityIdentifier("backNavArrow")
                                 Spacer()
                                 Button(action: { viewModel.favouriteMethod() },
-                                       label: { Image(IMAGE_FAV_ICON).resizable().frame(width: 26, height: 26) })
+                                       label: { Image(IMAGE_FAV_ICON).resizable().frame(width: 26, height: 26) }).accessibilityIdentifier("favouriteIcon")
                             }.padding(.horizontal, 24).padding(.top, 46)
                         }
                         Group {
                             HStack {
                                 Text(viewModel.model.name).modifier(SailecFont(.bold, size: 24)).lineLimit(1)
-                                    .foregroundColor(Color.text_primary_color)
+                                    .foregroundColor(Color.text_primary_color).accessibilityIdentifier("dogName")
                                 Spacer()
-                                GenderView(isMale: viewModel.model.gender == "male")
+                                GenderView(isMale: viewModel.model.gender == "male").accessibilityIdentifier("dogGender")
                             }.padding(.vertical, 8)
                             
                             HStack(alignment: .center) {
                                 HStack(alignment: .center, spacing: 2) {
                                     Image(IMAGE_LOC_ICON).resizable().frame(width: 24, height: 24)
                                     Text("\(viewModel.model.location) away").modifier(SailecFont(.regular, size: 14))
-                                        .foregroundColor(Color.text_primary_color).padding(.top, 2)
+                                        .foregroundColor(Color.text_primary_color).padding(.top, 2).accessibilityIdentifier("dogLocation")
                                 }
                                 Spacer()
                                 Text("\(viewModel.model.age) yrs | \(viewModel.model.about)").modifier(SailecFont(.regular, size: 14))
-                                    .lineLimit(1).foregroundColor(Color.text_primary_color)
+                                    .lineLimit(1).foregroundColor(Color.text_primary_color).accessibilityIdentifier("dogAgeAndTemperament")
                             }
                             
                             HStack {
                                 Text("12 min ago").modifier(SailecFont(.regular, size: 14))
-                                    .foregroundColor(Color.text_primary_color)
+                                    .foregroundColor(Color.text_primary_color).accessibilityIdentifier("adPosted")
                                 Spacer()
                             }.padding(.leading, 6).padding(.top, 2)
                             
@@ -66,7 +66,7 @@ struct DetailsView: View {
                                     Spacer()
                                 }
                                 Text(viewModel.story).modifier(SailecFont(.regular, size: 16))
-                                    .foregroundColor(Color.text_primary_color)
+                                    .foregroundColor(Color.text_primary_color).accessibilityIdentifier("storyText")
                             }.padding(.vertical, 16)
                             
                             VStack(spacing: 16) {
@@ -76,9 +76,9 @@ struct DetailsView: View {
                                     Spacer()
                                 }
                                 HStack(spacing: 8) {
-                                    DetailsInfoView(primary: "\(viewModel.model.age) yrs", secondary: "Age")
-                                    DetailsInfoView(primary: "\(viewModel.model.color)", secondary: "Color")
-                                    DetailsInfoView(primary: "\(viewModel.model.weight)", secondary: "Weight")
+                                    DetailsInfoView(primary: "\(viewModel.model.age) yrs", secondary: "Age").accessibilityIdentifier("quickInfoAge")
+                                    DetailsInfoView(primary: "\(viewModel.model.color)", secondary: "Color").accessibilityIdentifier("quickInfoColor")
+                                    DetailsInfoView(primary: "\(viewModel.model.weight)", secondary: "Weight").accessibilityIdentifier("quickInfoWeight")
                                 }
                             }.padding(.vertical, 16)
                             
@@ -121,14 +121,14 @@ struct DetailsOwnerView: View {
             Image(image).resizable().scaledToFill().frame(width: 60, height: 60).cornerRadius(30)
             VStack(alignment: .leading, spacing: 8) {
                 Text(name).modifier(SailecFont(.medium, size: 16))
-                    .foregroundColor(Color.text_primary_color)
+                    .foregroundColor(Color.text_primary_color).accessibilityIdentifier("ownerName")
                 Text(bio).modifier(SailecFont(.regular, size: 14))
-                    .foregroundColor(Color(hex: "828282"))
+                    .foregroundColor(Color(hex: "828282")).accessibilityIdentifier("ownerBio")
             }.padding(.leading, 8)
             Spacer()
             Button(action: { self.messageMethod() },
                    label: { Image(IMAGE_MSG_ICON).resizable().frame(width: 20, height: 20) })
-                .frame(width: 45, height: 45).background(Color.main_color).cornerRadius(25)
+                .frame(width: 45, height: 45).background(Color.main_color).cornerRadius(25).accessibilityIdentifier("msgButton")
         }
     }
 }
